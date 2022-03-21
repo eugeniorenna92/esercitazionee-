@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 80px;
+  border: 1px solid rgba(0, 0, 0, 0.411);
+  margin-top: 20px;
+}
+
+form > * {
+  margin: 10px 0;
+}

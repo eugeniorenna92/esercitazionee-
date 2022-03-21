@@ -1,0 +1,10 @@
+<app-navbar (refreshed)="delete()"></app-navbar>
+<app-search-gender
+  (refreshed)="refresh($event)"
+  [genderList]="genderList"
+></app-search-gender>
+
+<app-search-list
+  (refreshed)="refresh($event)"
+  [genderList]="genderList"
+></app-search-list>

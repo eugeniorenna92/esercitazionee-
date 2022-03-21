@@ -1,0 +1,26 @@
+<table class="table container mt-3" *ngIf="genderList">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Probability</th>
+      <th scope="col">Count</th>
+      <th scope="col">Date</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let gender of genderList" [ngClass]="color(gender)">
+      <th>{{ gender.name }}</th>
+      <td>{{ gender.gender }}</td>
+      <td>{{ gender.probability * 100 }}%</td>
+      <td>{{ gender.count }}</td>
+      <td>{{ gender?.date | date: "short" }}</td>
+      <td>
+        <button class="btn btn-info w-25" (click)="remove(gender)">
+          <strong>X</strong>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

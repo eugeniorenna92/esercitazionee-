@@ -1,0 +1,21 @@
+<div class="container">
+  <form
+    [formGroup]="searchForm"
+    (ngSubmit)="search()"
+    class="d-flex flex-column align-items-center justify-content-center"
+  >
+    <input
+      type="text"
+      id="formName"
+      placeholder=" Inserire nome..."
+      formControlName="name"
+    />
+    <button
+      class="btn btn-secondary"
+      type="submit"
+      [disabled]="!searchForm.valid"
+    >
+      Ricerca
+    </button>
+  </form>
+</div>
